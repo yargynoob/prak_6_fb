@@ -1,0 +1,191 @@
+html {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+html[data-theme="light"] > body {
+    background: #f5f5f5;
+    color: #000;
+}
+
+html[data-theme="dark"] > body {
+    background: #111;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    border-left: 4px solid #000;
+}
+
+html[data-theme="dark"] .form-container {
+    background: #222;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    border-left: 4px solid #fff;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    border-radius: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+html[data-theme="dark"] input {
+    background: #333;
+    color: #fff;
+    border-color: #fff;
+}
+
+button {
+    padding: 10px 15px;
+    background: #000;
+    color: white;
+    border: 1px solid #000;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background: #333;
+    border-color: #333;
+}
+
+html[data-theme="dark"] button {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+html[data-theme="dark"] button:hover {
+    background: #ccc;
+    border-color: #ccc;
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    color: #000;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 0;
+    background: #f5f5f5;
+    border-left: 4px solid #000;
+}
+
+html[data-theme="dark"] .error {
+    background: #333;
+    color: #fff;
+    border-left: 4px solid #fff;
+}
+
+#data-container {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 0;
+}
+
+html[data-theme="light"] #data-container {
+    background: #fff;
+    border: 1px solid #000;
+}
+
+html[data-theme="dark"] #data-container {
+    background: #222;
+    border: 1px solid #fff;
+}
+
+.controls {
+    margin: 20px 0;
+}
+
+.controls button {
+    margin-right: 10px;
+}
+
+html[data-theme="dark"] a {
+    color: inherit;
+    border-bottom-color: currentColor;
+}
+
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h1 {
+    border-bottom-color: currentColor !important;
+}
+
+html[data-theme="dark"] .container > div:first-child div {
+    background: #fff;
+}
+
+/* Стили для фокуса на элементах ввода */
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #000;
+}
+
+html[data-theme="dark"] input:focus {
+    box-shadow: 0 0 0 2px #fff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    transition: opacity 0.2s;
+}
+
+/* Черно-белый эффект для hover состояний */
+a:hover {
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+/* Переключатель темы: более очевидный индикатор текущей темы */
+html[data-theme="dark"] #toggle-theme::after {
+    font-size: 0.8em;
+    opacity: 0.8;
+}
+
+html[data-theme="light"] #toggle-theme::after {
+    font-size: 0.8em;
+    opacity: 0.8;
+}
+
+/* Стиль для data-container в темной теме */
+html[data-theme="dark"] #data-container pre {
+    background-color: #181818;
+    color: #e0e0e0;
+    padding: 8px;
+    border: 1px solid #444;
+}
+
+/* Улучшение контраста плейсхолдеров в темной теме */
+html[data-theme="dark"] input::placeholder {
+    color: #aaa;
+}

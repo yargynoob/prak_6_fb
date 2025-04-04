@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Личный кабинет</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="container">
+  
+  <h1 style="text-transform: uppercase; letter-spacing: 3px; border-bottom: 2px solid currentColor; padding-bottom: 10px;">Личный кабинет</h1>
+  <p style="font-size: 18px;">Добро пожаловать, <span id="username-display" style="font-weight: bold; text-decoration: underline;"></span>!</p>
+
+  <div class="controls" style="border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 15px 0;">
+    <button id="toggle-theme">Сменить тему</button>
+    <button id="refresh-data">Обновить данные</button>
+    <button id="logout-btn">Выйти</button>
+  </div>
+
+  <div id="data-container" style="margin-top: 30px;"></div>
+</div>
+<script src="/script.js"></script>
+</body>
+</html>
